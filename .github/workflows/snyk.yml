@@ -11,10 +11,6 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
     
-      - name: Install Snyk & Authenticate
-        run: |
-          sudo npm install -g snyk
-          snyk auth ${SNYK_TOKEN}
       # Run Snyk Code
       - name: Run Snyk Code
         run: |
